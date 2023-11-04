@@ -101,8 +101,8 @@ img {
 #close {
   cursor: pointer;
   position: absolute;
-  top: 17px;
-  right: 10px; }
+  top: 0px;
+  right: 0px; }
 
 #disclosure_txt {
   position: absolute;
@@ -112,6 +112,6 @@ img {
   height: 90px; }
 
 #disclosure {
-  background-color: transparent;
+  background-color: #002677;
   z-index: 1005;
   border: 1px solid #000000; }

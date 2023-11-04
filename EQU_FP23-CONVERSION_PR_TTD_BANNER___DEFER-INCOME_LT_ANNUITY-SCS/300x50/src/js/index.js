@@ -46,7 +46,8 @@ var nameSpace = O2KL || {};
                 "#copy-4",
                 "#cta",
                 "#img-2",
-                ,"#logo"
+                "#logo",
+                "#legal"
             ], {
                 x: 0,
                 autoAlpha: 0,
@@ -147,7 +148,7 @@ var nameSpace = O2KL || {};
         anchor.style.cursor = "pointer";
 
         /*var img = new Image();
-        img.src = "./img/static.jpg";*/
+        img.src = "./img/static.gif";*/
 
         anchor.appendChild(img);
         anchor.onclick = function() {
@@ -243,6 +244,32 @@ var nameSpace = O2KL || {};
                 autoAlpha:1,
                 x:0
             }
+        )
+
+        .fromTo(
+            ["#legal"],
+           .8, {
+                transformPerspective: 400,
+                autoAlpha: 0,
+                force3D: true,
+                rotationZ: 0.01,
+                 ease:Linear.easeInOut
+            },{
+                transformPerspective: 400,
+                autoAlpha:1,
+                x:0
+            },"-=0.8"
+        )
+
+        .to(
+            ["#copy-2", "#legal"],
+            0.4, {
+                transformPerspective: 400,
+                autoAlpha: 0,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Linear.easeNone
+            }, "+=2"
         )
 
         .to(

@@ -109,8 +109,8 @@ img {
   position: absolute;
   width: 18px;
   height: 18px;
-  top: 5px;
-  right: 5px; }
+  top: 0px;
+  right: 2px; }
 
 #disclosure_txt {
   position: absolute;

@@ -145,7 +145,7 @@ var nameSpace = O2KL || {};
         anchor.style.cursor = "pointer";
 
         /*var img = new Image();
-        img.src = "./img/static.jpg";*/
+        img.src = "./img/static.gif";*/
 
         anchor.appendChild(img);
         anchor.onclick = function() {
@@ -217,7 +217,7 @@ var nameSpace = O2KL || {};
         )
 
         .to(
-            ["#copy-1"],
+            ["#copy-1", "#legal"],
             0.4, {
                 transformPerspective: 400,
                 autoAlpha: 0,

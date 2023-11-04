@@ -184,8 +184,8 @@ gulp.task("copy", ["clean", "cleanSprites"], function() {
 
 gulp.task("copyStatic", function() {
     gulp
-        .src("./src/img/static.jpg")
-        .pipe(rename("EQU_FP23-CONVERSION_PR_TTD_BANNER___TACKLE-INFLATION_LT_HTML5__6043_300X600_ANNUITY-RC_STATIC.jpg"))
+        .src("./src/img/static.gif")
+        .pipe(rename("EQU_FP23-CONVERSION_PR_TTD_BANNER___TACKLE-INFLATION_LT_HTML5__6043_300X600_ANNUITY-RC_STATIC.gif"))
         .pipe(gulp.dest("../STATICS/"));
 });
 

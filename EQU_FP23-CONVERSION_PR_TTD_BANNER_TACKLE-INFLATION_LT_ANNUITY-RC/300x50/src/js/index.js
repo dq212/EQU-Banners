@@ -147,7 +147,7 @@ var nameSpace = O2KL || {};
         anchor.style.cursor = "pointer";
 
         /*var img = new Image();
-        img.src = "./img/static.jpg";*/
+        img.src = "./img/static.gif";*/
 
         anchor.appendChild(img);
         anchor.onclick = function() {
