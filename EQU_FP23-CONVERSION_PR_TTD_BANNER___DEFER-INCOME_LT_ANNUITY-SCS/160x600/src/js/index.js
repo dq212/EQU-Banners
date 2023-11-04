@@ -217,7 +217,7 @@ var nameSpace = O2KL || {};
         )
 
         .to(
-            ["#copy-1"],
+            ["#copy-1", "#legal"],
             0.4, {
                 transformPerspective: 400,
                 autoAlpha: 0,
