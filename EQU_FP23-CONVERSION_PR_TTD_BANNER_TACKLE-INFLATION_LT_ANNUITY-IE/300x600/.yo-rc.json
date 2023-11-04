@@ -1,0 +1,13 @@
+{
+    "generator-banner": {
+        "nameSpace": "O2KL",
+        "publisher": "doubleclick",
+        "bannerName": "EQU_FP23-CONVERSION_PR_TTD_BANNER___TACKLE-INFLATION_LT_HTML5__6043_300X600_ANNUITY-IE",
+        "width": "300",
+        "height": "600",
+        "size": "150",
+        "includeFallbackIE": true,
+        "fallbackIEVersion": 9,
+        "doubleclickPlatform": "campaignManager"
+    }
+}``
