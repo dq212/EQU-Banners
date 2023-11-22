@@ -4,7 +4,7 @@ var imageSize = require("image-size");
 describe("zipfile", function() {
     it("should be under /Users/dq212/MyFiles/CLIENTS/o2kl/AARP/Banners/Caregiving-Display/Renew/728x90/node_modules/.bin/resize-bannekb", function() {
         var zip = fs.statSync(
-            "../HTML/EQU_FP23-CONVERSION_PR_TTD_BANNER___DEFER-INCOME_LT_HTML5__6043_728X90_ANNUITY-SCS.zip"
+            "../HTML/EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_728X90_.zip"
         );
         var fileSizeInKB = zip["size"] / 1000;
         expect(fileSizeInKB).not.toBeGreaterThan(

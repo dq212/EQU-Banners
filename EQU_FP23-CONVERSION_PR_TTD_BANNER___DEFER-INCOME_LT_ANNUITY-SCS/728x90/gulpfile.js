@@ -185,7 +185,7 @@ gulp.task("copy", ["clean", "cleanSprites"], function() {
 gulp.task("copyStatic", function() {
     gulp
         .src("./src/img/static.gif")
-        .pipe(rename("EQU_FP23-CONVERSION_PR_TTD_BANNER___DEFER-INCOME_LT_HTML5__6043_728X90_ANNUITY-SCS_STATIC.gif"))
+        .pipe(rename("EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_728X90__STATIC.gif"))
         .pipe(gulp.dest("../STATICS/"));
 });
 
@@ -252,7 +252,7 @@ gulp.task(
     function() {
         return gulp
             .src(dist + "/*")
-            .pipe(zip("EQU_FP23-CONVERSION_PR_TTD_BANNER___DEFER-INCOME_LT_HTML5__6043_728X90_ANNUITY-SCS.zip"))
+            .pipe(zip("EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_728X90_.zip"))
             .pipe(gulp.dest("../HTML/"));
     }
 );

@@ -1,93 +1,144 @@
-var fs = require("fs");
-var imageSize = require("image-size");
+<!DOCTYPE html>
+<html>
 
-describe("zipfile", function() {
-    it("should be under /Users/dq212/MyFiles/CLIENTS/o2kl/AARP/Banners/Caregiving-Display/Renew/300x600/node_modules/.bin/resize-bannekb", function() {
-        var zip = fs.statSync(
-            "../HTML/EQU_FP23-CONVERSION_PR_TTD_BANNER___DEFER-INCOME_LT_HTML5__6043_300X600_ANNUITY-SCS.zip"
-        );
-        var fileSizeInKB = zip["size"] / 1000;
-        expect(fileSizeInKB).not.toBeGreaterThan(
-            150,
-            "\nZip size is " + fileSizeInKB + "kb, it should be less than 150kb"
-        );
-    });
+<head>
+    <title>EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_160X600_</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="ad.size" content="width=160,height=600" />
+    <link type="text/css" rel="stylesheet" media="screen, projection" href="css/styles.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+
+
+
+        <!-- start adding banner elements below this line-->
+        <div id="bg"></div>
+        <div id="bg-color"></div>
+
+        <div id="click_through"></div>
+
+        <div id="athena"><img src="../img/athena@2x.png" alt="" /></div>
+
+        <div id="blue-2"><img src="../img/blue-2@2x.png" alt="" /></div>
+        <div id="blue-3"><img src="../img/blue-3@2x.png" alt="" /></div>
+        <div id="blue-1"><img src="../img/blue-1@2x.png" alt="" /></div>
+
+        <div id="copy-1"><img src="../img/copy-1@2x.png" alt="" /></div>
+        <div id="copy-2"><img src="../img/copy-2@2x.png" alt="" /></div>
+        <div id="copy-3"><img src="../img/copy-3@2x.png" alt="" /></div>
+        <div id="copy-4"><img src="../img/copy-4@2x.png" alt="" /></div>
+
+
+
+        <div id="logo"><img src="../img/logo@2x.png" alt="" /></div>
+        <div id="logo-blue"><img src="../img/logo_blue@2x.png" alt="" /></div>
+        <div id="cta">
+            <img src="../img/cta@2x.png" alt="" />
+        </div>
+
+        <div id="btn_disclosure"><img src="../img/btn_disclosure@2x.png" alt="" /></div>
+        <div id="legal"><img src="../img/legal@2x.png" alt="" /></div>
+        <div id="code"><img src="../img/code@2x.png" alt="" /></div>
+
+        <div id="disclosure">
+            <div id="logo2"><img src="../img/logo@2x.png" alt="" /></div>
+            <div id="disclosure_txt"><img src="../img/disclosure@2x.png" alt="" /></div>
+            <div id="close"><img src="../img/close@2x.png" alt="" /></div>
+        </div>
+
+
+    </div>
+    <!--START OF IMAGES -->
+
+    <!--END OF IMAGES -->
+
+    <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+    <script type="text/javascript" src="js/O2KL.js"></script>
+    <script type="text/javascript" src="js/IEfallback.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        var clickTag = "https://www.google.com";
+
+        window.onload = function() {
+            O2KL.init();
+        };
+    </script>
+</body>
+
+</html>
+    img src = "../img/cta@2x.png"
+alt = "" / >
+    <
+    /div>
+
+<
+div id = "btn_disclosure" > < img src = "../img/btn_disclosure@2x.png"
+alt = "" / > < /div> <
+    div id = "legal" > < img src = "../img/legal@2x.png"
+alt = "" / > < /div> <
+    div id = "code" > < img src = "../img/code@2x.png"
+alt = "" / > < /div>
+
+<
+div id = "disclosure" >
+    <
+    div id = "logo2" > < img src = "../img/logo@2x.png"
+alt = "" / > < /div> <
+    div id = "disclosure_txt" > < img src = "../img/disclosure@2x.png"
+alt = "" / > < /div> <
+    div id = "close" > < img src = "../img/close@2x.png"
+alt = "" / > < /div> <
+    /div>
+
+
+<
+/div>
+<!--START OF IMAGES -->
+
+<!--END OF IMAGES -->
+
+<
+script type = "text/javascript"
+src = "https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js" > < /script> <
+    script type = "text/javascript"
+src = "js/O2KL.js" > < /script> <
+    script type = "text/javascript"
+src = "js/IEfallback.js" > < /script> <
+    script type = "text/javascript"
+src = "js/index.js" > < /script> <
+    script type = "text/javascript" >
+    var clickTag = "https://www.google.com";
+
+window.onload = function() {
+    O2KL.init();
+}; <
+/script> <
+/body>
+
+<
+/html> }
+
+expect(assetCheck()).toBe(
+true,
+"\nAt least one image asset has been included in this banner without actually getting referenced in the code. Please remove it"
+);
 });
 
-describe("static image", function() {
-    it("should match dimensions of the creative", function() {
-        var dimensions = imageSize("src/img/static.gif");
-
-        expect(dimensions.width).toBe(
-            300,
-            "\nIncorrect width on the static image. It should be 300px wide"
-        );
-        expect(dimensions.height).toBe(
-            600,
-            "\nIncorrect height on the static image. It should be 600px tall"
-        );
-    });
+it("should have no more than 15 assets", function() {
+    expect(assets.length).not.toBeGreaterThan(
+        15,
+        "\nThis banner has more than 15 image assets. Please consider using sprites or some other technique to limit image assets included"
+    );
 });
 
-describe("built package", function() {
-    //html build and imgs
-    var html = fs.readFileSync("dist/index.html", "utf8");
-    //array of all the assets in the img folder
-    var assets = assetList("src/img/");
-
-    //counts the frequency of asset used in compiled html
-    function count(str, subStr) {
-        var matches = str.match(new RegExp(subStr, "g"));
-        return matches ? matches.length : 0;
-    }
-
-    function assetList(dir, filelist) {
-        var files = fs.readdirSync(dir);
-        filelist = filelist || [];
-        files.forEach(function(file) {
-            if (fs.statSync(dir + file).isDirectory()) {
-                filelist = assetCheck(dir + file + "/", filelist);
-            } else {
-                filelist.push(file);
-            }
-        });
-
-        return filelist;
-    }
-
-    it("should reference all assets", function() {
-        function assetCheck() {
-            for (var i = 0; i < assets.length; i++) {
-                if (
-                    count(html, assets[i]) < 1 &&
-                    assets[i] !== ".DS_Store" &&
-                    assets[i] !== "static.gif"
-                ) {
-                    //notifies the user in the console which assets are not used
-                    // console.log(assets[i]);
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        expect(assetCheck()).toBe(
-            true,
-            "\nAt least one image asset has been included in this banner without actually getting referenced in the code. Please remove it"
-        );
-    });
-
-    it("should have no more than 15 assets", function() {
-        expect(assets.length).not.toBeGreaterThan(
-            15,
-            "\nThis banner has more than 15 image assets. Please consider using sprites or some other technique to limit image assets included"
-        );
-    });
-
-    it("should have no http calls", function() {
-        expect(count(html, "http://")).toBe(
-            0,
-            '\nPlease remove any "http://" calls from the html file. Relative protocols should work, or use "https://"'
-        );
-    });
+it("should have no http calls", function() {
+expect(count(html, "http://")).toBe(
+    0,
+    '\nPlease remove any "http://" calls from the html file. Relative protocols should work, or use "https://"'
+);
+});
 });
