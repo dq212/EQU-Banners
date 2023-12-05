@@ -1,0 +1,13 @@
+{
+    "generator-banner": {
+        "nameSpace": "O2KL",
+        "publisher": "doubleclick",
+        "bannerName": "EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_300X600_CONSIDERATION",
+        "width": "300",
+        "height": "600",
+        "size": "150",
+        "includeFallbackIE": true,
+        "fallbackIEVersion": 9,
+        "doubleclickPlatform": "campaignManager"
+    }
+}``

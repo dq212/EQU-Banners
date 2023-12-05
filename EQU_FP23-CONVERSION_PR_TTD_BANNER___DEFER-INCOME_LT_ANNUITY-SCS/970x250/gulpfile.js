@@ -1,128 +1,77 @@
-<!DOCTYPE html>
-<html>
+var gulp = require("gulp"),
+    connect = require("gulp-connect"),
+    open = require("gulp-open"),
+    compass = require("gulp-compass"),
+    plumber = require("gulp-plumber"),
+    jshint = require("gulp-jshint"),
+    watch = require("gulp-watch"),
+    clean = require("gulp-clean"),
+    copy = require("gulp-copy"),
+    inline = require("gulp-inline"),
+    uglify = require("gulp-uglify"),
+    minifyCSS = require("gulp-clean-css"),
+    replace = require("gulp-replace"),
+    htmlmin = require("gulp-htmlmin"),
+    image = require("gulp-image"),
+    zip = require("gulp-zip"),
+    argv = require("yargs").argv,
+    jasmine = require("gulp-jasmine"),
+    notify = require("gulp-notify"),
+    del = require("del"),
+    os = require("os"),
+    args = require("yargs").argv,
+    rename = require("gulp-rename");
 
-<head>
-    <title>EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_160X600_</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="ad.size" content="width=160,height=600" />
-    <link type="text/css" rel="stylesheet" media="screen, projection" href="css/styles.css" />
-</head>
+var src = "./src",
+    dist = "./dist",
+    baseURL = argv.production === undefined ? src : dist,
+    port = 8000 + Math.floor(Math.random() * 1000),
+    uri = "http://localhost:" + port;
 
-<body>
-    <div id="wrapper">
+var uncompressedImgs = args.fullsize ?
+    args.fullsize.split(",").map(function(img) {
+        return "!" + dist + "/" + img;
+    }) : [];
 
+gulp.task("default", ["serve"]);
+gulp.task("serve", ["connect", "open", "watch"]);
+gulp.task("build", [
+    "clean",
+    "copy",
+    "sass",
+    "inline",
+    "replace",
+    "htmlmin",
+    "compress",
+    "testProd",
+    "copyStatic",
+]);
 
+gulp.task("test", function() {
+    gulp
+        .src("tests/test.js")
+        .pipe(jasmine())
+        .on(
+            "error",
+            notify.onError({
+                title: "Jasmine Test Failed",
+                message: "One or more tests failed, see cli for details.",
+            })
+        );
+});
 
-        <!-- start adding banner elements below this line-->
-        <div id="bg"></div>
-        <div id="bg-color"></div>
-
-        <div id="click_through"></div>
-
-        <div id="athena"><img src="../img/athena@2x.png" alt="" /></div>
-
-        <div id="blue-2"><img src="../img/blue-2@2x.png" alt="" /></div>
-        <div id="blue-3"><img src="../img/blue-3@2x.png" alt="" /></div>
-        <div id="blue-1"><img src="../img/blue-1@2x.png" alt="" /></div>
-
-        <div id="copy-1"><img src="../img/copy-1@2x.png" alt="" /></div>
-        <div id="copy-2"><img src="../img/copy-2@2x.png" alt="" /></div>
-        <div id="copy-3"><img src="../img/copy-3@2x.png" alt="" /></div>
-        <div id="copy-4"><img src="../img/copy-4@2x.png" alt="" /></div>
-
-
-
-        <div id="logo"><img src="../img/logo@2x.png" alt="" /></div>
-        <div id="logo-blue"><img src="../img/logo_blue@2x.png" alt="" /></div>
-        <div id="cta">
-            <img src="../img/cta@2x.png" alt="" />
-        </div>
-
-        <div id="btn_disclosure"><img src="../img/btn_disclosure@2x.png" alt="" /></div>
-        <div id="legal"><img src="../img/legal@2x.png" alt="" /></div>
-        <div id="code"><img src="../img/code@2x.png" alt="" /></div>
-
-        <div id="disclosure">
-            <div id="logo2"><img src="../img/logo@2x.png" alt="" /></div>
-            <div id="disclosure_txt"><img src="../img/disclosure@2x.png" alt="" /></div>
-            <div id="close"><img src="../img/close@2x.png" alt="" /></div>
-        </div>
-
-
-    </div>
-    <!--START OF IMAGES -->
-
-    <!--END OF IMAGES -->
-
-    <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
-    <script type="text/javascript" src="js/O2KL.js"></script>
-    <script type="text/javascript" src="js/IEfallback.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        var clickTag = "https://www.google.com";
-
-        window.onload = function() {
-            O2KL.init();
-        };
-    </script>
-</body>
-
-</html>
-    img src = "../img/cta@2x.png"
-alt = "" / >
-    <
-    /div>
-
-<
-div id = "btn_disclosure" > < img src = "../img/btn_disclosure@2x.png"
-alt = "" / > < /div> <
-    div id = "legal" > < img src = "../img/legal@2x.png"
-alt = "" / > < /div> <
-    div id = "code" > < img src = "../img/code@2x.png"
-alt = "" / > < /div>
-
-<
-div id = "disclosure" >
-    <
-    div id = "logo2" > < img src = "../img/logo@2x.png"
-alt = "" / > < /div> <
-    div id = "disclosure_txt" > < img src = "../img/disclosure@2x.png"
-alt = "" / > < /div> <
-    div id = "close" > < img src = "../img/close@2x.png"
-alt = "" / > < /div> <
-    /div>
-
-
-<
-/div>
-<!--START OF IMAGES -->
-
-<!--END OF IMAGES -->
-
-<
-script type = "text/javascript"
-src = "https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js" > < /script> <
-    script type = "text/javascript"
-src = "js/O2KL.js" > < /script> <
-    script type = "text/javascript"
-src = "js/IEfallback.js" > < /script> <
-    script type = "text/javascript"
-src = "js/index.js" > < /script> <
-    script type = "text/javascript" >
-    var clickTag = "https://www.google.com";
-
-window.onload = function() {
-O2KL.init();
-}; <
-/script> <
-/body>
-
-<
-/html>         message: "One or more tests failed, see cli for details.",
-})
-);
+//tests after build
+gulp.task("testProd", ["compress"], function() {
+    gulp
+        .src("tests/test.js")
+        .pipe(jasmine())
+        .on(
+            "error",
+            notify.onError({
+                title: "Jasmine Test Failed",
+                message: "One or more tests failed, see cli for details.",
+            })
+        );
 });
 
 gulp.task("connect", ["sass"], function() {
@@ -236,7 +185,7 @@ gulp.task("copy", ["clean", "cleanSprites"], function() {
 gulp.task("copyStatic", function() {
     gulp
         .src("./src/img/static.gif")
-        .pipe(rename("EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_970x250__STATIC.gif"))
+        .pipe(rename("EQU_FP23-CONVERSION_PR_TTD_BANNER___DEFER-INCOME_LT_HTML5__6043_970x250_ANNUITY-SCS_STATIC.gif"))
         .pipe(gulp.dest("../STATICS/"));
 });
 
@@ -303,7 +252,7 @@ gulp.task(
     function() {
         return gulp
             .src(dist + "/*")
-            .pipe(zip("EQU_FP23-CONSIDERATION_PR_TTD_BANNER___DEFY-STRESS_LM_970X250_.zip"))
+            .pipe(zip("EQU_FP23-CONVERSION_PR_TTD_BANNER___DEFER-INCOME_LT_HTML5__6043_970X250_ANNUITY-SCS.zip"))
             .pipe(gulp.dest("../HTML/"));
     }
 );
