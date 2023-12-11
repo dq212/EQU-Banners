@@ -365,7 +365,7 @@ var nameSpace = O2KL || {};
         .fromTo(
             ["#cta"],
             0.5, { scale:1.05,
-                transformOrigin: "25% 80%",
+                transformOrigin: "25% 60%",
          }, {
                 scale: 1,
                 transformPerspective: 400,
@@ -405,7 +405,7 @@ var nameSpace = O2KL || {};
                 0.3, {
                     scale: 1,
                     transformPerspective: 400,
-                    transformOrigin: "35% 70%",
+                    transformOrigin: "25% 60%",
                     autoAlpha: 1,
                     force3D: true,
                     rotationZ: 0.01,
@@ -417,7 +417,7 @@ var nameSpace = O2KL || {};
                 0.3, {
                     scale: 1.05,
                     transformPerspective: 400,
-                    transformOrigin: "35% 70%",
+                    transformOrigin: "25% 60%",
                     autoAlpha: 1,
                     force3D: true,
                     rotationZ: 0.01,
@@ -429,7 +429,7 @@ var nameSpace = O2KL || {};
                 0.3, {
                     scale: 1,
                     transformPerspective: 400,
-                    transformOrigin: "25% 70%",
+                    transformOrigin: "25% 60%",
                     autoAlpha: 1,
                     force3D: true,
                     rotationZ: 0.01,
