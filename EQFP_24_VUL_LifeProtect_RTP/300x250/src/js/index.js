@@ -214,7 +214,7 @@ var nameSpace = O2KL || {};
                 transformPerspective: 400,
                 autoAlpha:1,
                 x:0
-            }, "-=0.1"
+            }, "-=0.8"
         )
 
         .to(
