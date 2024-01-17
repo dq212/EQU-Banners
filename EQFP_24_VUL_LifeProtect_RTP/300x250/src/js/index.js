@@ -363,7 +363,7 @@ var nameSpace = O2KL || {};
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Linear.easeOut,
-            },"+=0.25"
+            },"-=0.4"
         )
         .to(
             ["#logo-blue"],
