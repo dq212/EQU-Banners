@@ -174,8 +174,40 @@ var nameSpace = O2KL || {};
 
 
         .fromTo(
+            ["#blue-3"],
+           0.75,{
+                transformPerspective: 400,
+                autoAlpha: 1,
+                x:width,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power2.easeInOut,
+            }, {
+                transformPerspective: 400,
+                x:0
+            },
+            "+=0"
+        )
+
+        .fromTo(
+            ["#blue-2"],
+           0.75, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                y:height,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power2.easeInOut,
+            },{
+                transformPerspective: 400,
+                y:0
+            },
+            "-=.9"
+        )
+
+        .fromTo(
             ["#copy-1"],
-           .8, {
+           .5, {
                 transformPerspective: 400,
                 autoAlpha: 0,
                 x:"-25",
@@ -186,23 +218,23 @@ var nameSpace = O2KL || {};
                 transformPerspective: 400,
                 autoAlpha:1,
                 x:0
-            }, "-=0.4"
+            }, "-=0.8"
         )
 
         .to(
-            ["#copy-1"],
+            ["#copy-1", "#legal"],
             0.4, {
                 transformPerspective: 400,
                 autoAlpha: 0,
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Linear.easeNone
-            }, "+=1.75"
+            }, "+=1.25"
         )
 
         .fromTo(
             ["#copy-2"],
-           .8, {
+           .6, {
                 transformPerspective: 400,
                 autoAlpha: 0,
                 x:"-25",
@@ -224,14 +256,12 @@ var nameSpace = O2KL || {};
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Linear.easeNone
-            }, "+=1.75"
+            }, "+=1.5"
         )
-
-      
 
         .fromTo(
             ["#copy-3"],
-           .8, {
+           .6, {
                 transformPerspective: 400,
                 autoAlpha: 0,
                 x:"-25",
@@ -244,7 +274,6 @@ var nameSpace = O2KL || {};
                 x:0
             }
         )
-
 
         .to(
             ["#copy-3"],
@@ -254,14 +283,13 @@ var nameSpace = O2KL || {};
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Linear.easeNone
-            }, "+=1.75"
+            }, "+=1.25"
         )
 
-      
 
         .fromTo(
             ["#copy-4"],
-           .8, {
+           .6, {
                 transformPerspective: 400,
                 autoAlpha: 0,
                 x:"-25",
@@ -274,23 +302,11 @@ var nameSpace = O2KL || {};
                 x:0
             }
         )
-        .to(
-            ["#copy-4"],
-            0.4, {
-                transformPerspective: 400,
-                autoAlpha: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Linear.easeNone
-            }, "+=1.75"
-        )
-
-
 
        
         .fromTo(
             ["#copy-5"],
-           .8, {
+           .6, {
                 transformPerspective: 400,
                 autoAlpha: 0,
                 x:"-25",
@@ -302,11 +318,8 @@ var nameSpace = O2KL || {};
                 autoAlpha:1,
                 x:0
             },
-            "+=0"
+             "+=2.25"
         )
-
-
-
 
     };
 
@@ -322,10 +335,8 @@ var nameSpace = O2KL || {};
         console.log(
 "start bg image"
         );
-         tl = new TimelineMax({
-            onComplete: nameSpace.onAnimationComplete,
-        });
-
+        var tl = new TimelineMax();
+    
         tl
         .fromTo(
             ["#athena"],
@@ -341,10 +352,13 @@ var nameSpace = O2KL || {};
                 transformPerspective: 400,
                 autoAlpha:1,
                 scale:1
+
+            
             },
             "-=1.25"
         )
 
+//below is the timing for the blue
         .to(
             ["#bg-color, #logo"],
             0.4, {
@@ -353,7 +367,7 @@ var nameSpace = O2KL || {};
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Linear.easeOut,
-            }, "+=4"
+            },"+=2.25"
         )
         // .to(
         //     ["#logo-blue"],
