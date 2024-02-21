@@ -1,0 +1,134 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+@import "compass/utilities/sprites";
+// set up variables
+$width: 160px;
+$height: 600px;
+// Uncomment to include sprites in your banner
+// $sprites: sprite-map("sprites/*.png");
+// to use sprites, place the image in the sprites folder and set the background for the desired element as follows:
+// .element { background: sprite($sprites, image-name); }
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+*,
+:before,
+:after {
+    @include box-sizing(border-box);
+}
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:$width;
+    height: $height;
+    overflow: hidden;
+  
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#bg {
+    @extend .abs-pos;
+    background-color: #f0f0f0;
+}
+
+#bg-color {
+    @extend .abs-pos;
+    background-color: #002677;
+}
+
+#wrapper {
+    @extend .abs-pos;
+    position: relative;
+    visibility: hidden;
+    &.show {
+        visibility: visible;
+    }
+}
+
+#click_through {
+    @extend .abs-pos;
+    z-index: 999;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #000000;
+}
+#logo {
+    @extend .abs-pos;
+}
+#logo2 {
+    @extend .abs-pos;
+}
+#logo-blue {
+    @extend .abs-pos;
+}
+#copy-1 {
+    @extend .abs-pos;
+}
+#copy-2 {
+    @extend .abs-pos;
+}
+#copy-3 {
+    @extend .abs-pos;
+}
+#copy-4 {
+    @extend .abs-pos;
+}
+#cta {
+    @extend .abs-pos;
+}
+#blue-1 {
+    @extend .abs-pos;
+}
+#blue-2 {
+    @extend .abs-pos;
+}
+#blue-3 {
+    @extend .abs-pos;
+}
+#athena {
+    position:absolute;
+    width:200%;
+    height: auto;
+    top:240px;
+    left:-90px;
+}
+#btn_disclosure {
+    position: absolute;
+    width:105px;
+    height:20px;
+    top:478px;
+    left:42px;
+    z-index: 1001;
+    cursor: pointer;
+}
+#close {
+  cursor: pointer; 
+  position:absolute;
+  top:106px;
+  right:16px;
+}
+#disclosure_txt {
+    position:absolute;
+    top:0;
+    left:0;
+    width:160px;
+    height:502px;
+}
+#disclosure {
+    background-color: #002677;
+    @extend .abs-pos;
+    z-index: 1005;
+    border: 1px solid #000000;
+}
+#legal {
+    @extend .abs-pos;
+}
+#code {
+    @extend .abs-pos;
+}
